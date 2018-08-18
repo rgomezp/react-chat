@@ -40,6 +40,7 @@ io.on('connection', socket => {
       return socket.emit('errorMessage', 'No username!');
     }
     socket.username = String(username);
+    console.log("Set username to ", username);
   });
 
   socket.on('room', requestedRoom => {
